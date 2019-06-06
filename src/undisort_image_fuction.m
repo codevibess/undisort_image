@@ -18,8 +18,9 @@ function out = undisort_image_fuction(image_name, strength_param, zoom_param)
     % why i create gray image? because it give posibility to obtain height and width of img in simple way
     J = rgb2gray(source_image);
     % after test remove this stuff
-    [image_height, image_width] = size(J);
- 
+    
+    [image_height, image_width, number_of_color_channels] = size(source_image);
+    
     half_height = image_height / 2;
     half_width = image_width / 2;
     % strenght of barrel disortion removal
