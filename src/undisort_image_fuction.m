@@ -2,21 +2,21 @@ function out = undisort_image_fuction(image_name, strength_param, zoom_param)
   
     if ~ exist('image_name', 'var')
         % first parameter does not exist, so default it to something
-        image_name = '../images/test2.jpg';
+        image_name = '../images/2.jpg';
     end
     if ~ exist('strength_param', 'var')
         % second parameter does not exist, so default it to something
-        strength_param = 1.0;
+        strength_param =3;
     end
     if ~ exist('zoom_param', 'var')
         % third parameter does not exist, so default it to something
-        zoom_param = 1.0;
+        zoom_param = 1.1;
     end
     % here we read the data from file
     % imread return for us 3D matrix, where every submatrix is R or G or B
     source_image = imread(image_name);
     % why i create gray image? because it give posibility to obtain height and width of img in simple way
-    J = rgb2gray(source_image);
+  
     % after test remove this stuff
     
     [image_height, image_width, number_of_color_channels] = size(source_image);
